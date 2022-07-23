@@ -18,7 +18,7 @@ function QuestionModule( props ) {
     } else if (props.type === "3"){
         moduleType = WireGame(props);
     } else if (props.type === "4") {
-        moduleType = Timer();
+        moduleType = Timer(props);
     }
     
     return (<div className="w-full h-full"> { moduleType } </div>);
