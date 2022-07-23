@@ -6,6 +6,7 @@ import Teacher from "./pages/Teacher";
 import Main from "./pages/Main";
 import Error from "./pages/Error";
 import About from "./pages/About";
+import TermsAndConditions from "./pages/TermsAndConditions.jsx";
 import Nav from "./components/Nav/Nav";
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
         <Route path="about" element={<About />} />
         <Route path="teacher" element={<Teacher />} />
         <Route path="main" element={<Main />} />
+        <Route path="terms" element={<TermsAndConditions />} />
         <Route path="*" element={<Error />} />
       </Routes>
     </div>
