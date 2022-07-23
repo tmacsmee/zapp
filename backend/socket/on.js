@@ -1,28 +1,45 @@
-import { Socket } from "socket.io";
-import mongoose from "mongoose";
-import Course from "../schema/Course";
-import { DBManager } from "../DBManager";
+import { DBManager } from "../manager/DBManager";
 
-/**
- * @param {Socket} socket - user socket
- */
-export async function CreateRoomOn(socket) {
-  socket.on("create-room", async () => {
-    await DBManager.createCourse({
-      name: "test",
-      code: "test",
-    });
-    await DBManager.createStudent({
-      username: "hi",
-      password: "bye",
-      name: "test",
-    });
-    await DBManager.joinCourse("hi", "test");
-    await DBManager.leaveCourse("hi", "test");
-    await DBManager.joinCourse("hi", "test");
-    await DBManager.incrementScore("hi", "test");
-    await DBManager.decrementScore("hi", "test");
-    await DBManager.decrementScore("hi", "test");
-    console.log(await DBManager.getStudent("hi"));
+export function CreateCourseOn(socket) {
+  socket.on("create-course", async (course, callback) => {
+    const result = DBManager.createCourse(course);
+    if (callback) {
+      callback(result);
+    }
+  });
+}
+
+export function CreateStudentOn(socket) {
+  socket.on("create-student", async (student, callback) => {
+    const result = DBManager.createStudent(student);
+    if (callback) {
+      callback(result);
+    }
+  });
+}
+
+export function JoinCourseOn(socket) {
+  socket.on("join-course", async ({ username, courseCode }, callback) => {
+    const result = DBManager.joinCourse(username, courseCode);
+    if (callback) {
+      if (result) {
+        callback(DBManager.getStudent(username));
+      } else {
+        callback(null);
+      }
+    }
+  });
+}
+
+export function LeaveCourseOn(socket) {
+  socket.on("leave-course", async ({ username, courseCode }, callback) => {
+    const result = DBManager.leaveCourse(username, courseCode);
+    if (callback) {
+      if (result) {
+        callback(DBManager.getStudent(username));
+      } else {
+        callback(null);
+      }
+    }
   });
 }

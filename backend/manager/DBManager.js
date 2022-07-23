@@ -1,6 +1,5 @@
-import mongoose from "mongoose";
-import Course from "./schema/Course";
-import Student from "./schema/Student";
+import Course from "../schema/Course";
+import Student from "../schema/Student";
 
 export class DBManager {
   static async createCourse(course) {
@@ -9,7 +8,13 @@ export class DBManager {
       code: course.code,
     });
 
-    await newCourse.save();
+    try {
+      await newCourse.save();
+    } catch (error) {
+      console.log("Failed to create course");
+      return false;
+    }
+    return true;
   }
 
   static async createStudent(student) {
@@ -24,7 +29,9 @@ export class DBManager {
       await newStudent.save();
     } catch (error) {
       console.log("Failed to create student");
+      return false;
     }
+    return true;
   }
 
   static async joinCourse(username, courseId) {
@@ -33,6 +40,7 @@ export class DBManager {
 
     if (!student || !course) {
       console.log("Failed to find student or course");
+      return false;
     } else {
       const newCourseEntry = {
         course: course._id,
@@ -41,6 +49,7 @@ export class DBManager {
 
       student.courses.push(newCourseEntry);
       await student.save();
+      return true;
     }
   }
 
@@ -50,6 +59,7 @@ export class DBManager {
 
     if (!student || !course) {
       console.log("Failed to find student or course");
+      return false;
     } else {
       console.log(
         student.courses.filter((entry) => entry.course !== course._id)
@@ -58,6 +68,7 @@ export class DBManager {
         (entry) => entry.course.toString() !== course._id.toString()
       );
       await student.save();
+      return true;
     }
   }
 

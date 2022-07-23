@@ -1,7 +1,6 @@
 import express from "express";
 import path from "path";
 import { createServer } from "http";
-import { Server } from "socket.io";
 import { initSocketServer, getSocketIO } from "./socket/index.js";
 import { CreateRoomOn } from "./socket/on.js";
 import mongoose from "mongoose";
@@ -30,7 +29,7 @@ initSocketServer(httpServer);
 
 const io = getSocketIO();
 
-io.on("connection", async (socket) => {
+io.on("connection", (socket) => {
   CreateRoomOn(socket);
 });
 
