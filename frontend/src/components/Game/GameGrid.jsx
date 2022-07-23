@@ -1,7 +1,7 @@
 import QuestionModule from "./QuestionModule";
 
 const styles = {
-    gridBox: `flex justify-center items-center h-44 w-full bg-secondary rounded-xl`,
+    gridBox: `flex justify-center items-center h-44 w-full bg-secondary rounded-xl p-4`,
 }
 
 function GameGrid() {
@@ -10,8 +10,14 @@ function GameGrid() {
             <div className={styles.gridBox}><QuestionModule type="0" /></div>
             
             <div className={styles.gridBox}>2</div>
-            <div className={styles.gridBox}>3</div>
-            <div className={styles.gridBox}>4</div>
+            
+            <div className={styles.gridBox}>
+                <QuestionModule type="3" answer1="option1" answer2="option2" answer3="option3" answer4="option4" />
+            </div>
+            <div className={styles.gridBox}>
+                <QuestionModule type="4" />
+            </div>
+            
             <div className={styles.gridBox}>Timer</div>
             <div className={styles.gridBox}>6</div>
             <div className={styles.gridBox}>7</div>
