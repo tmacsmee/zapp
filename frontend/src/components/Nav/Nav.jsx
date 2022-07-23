@@ -1,14 +1,14 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "../../App.css";
 import "./Nav.css";
-import { Link } from "react-router-dom";
 
 const Nav = () => {
   return (
     <div className="nav-container">
-      <div className="logo">
+      <Link to="/" className="logo">
         <h2>zapp</h2>
-      </div>
+      </Link>
       <div className="nav-items">
         <Link to="/about" className="nav-item">
           about us
@@ -19,9 +19,11 @@ const Nav = () => {
         <Link to="/main" className="nav-item">
           classes
         </Link>
-        <Link to="/login" className="nav-item primary-btn">
-          log in
-        </Link>
+        <div className="button-container">
+          <Link to="/login" className="primary-btn">
+            log in
+          </Link>
+        </div>
       </div>
     </div>
   );
