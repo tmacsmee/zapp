@@ -19,7 +19,7 @@ export default function WireGame(props) {
 
 
     return (
-        <div className="w-full h-full flex p-3 relative">
+        <div className="w-full h-full flex relative">
             <div className="">
                 <h2 className="">What is M in MERN</h2>
                 <ol>
@@ -28,7 +28,7 @@ export default function WireGame(props) {
                     <li>3. money</li>
                     <li>4. Mongo</li>
                 </ol>
-                <button className="m-2 p-1 border-2 border-black rounded-md ">Submit</button>
+                <button className="m-2 px-1 border-2 border-black rounded-md ">Submit</button>
 
             </div>
 
