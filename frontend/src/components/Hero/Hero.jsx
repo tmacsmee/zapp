@@ -13,7 +13,7 @@ const Hero = () => {
       <div className="text-content break-normal">
         <div className="tag-line">
           <h3>seamlessly mix learning and fun&nbsp;&nbsp;</h3>
-          <div className="-mt-7 p-3 bg-[color:#e8e8e8]"></div>
+          {/* <div className="-mt-7 p-3 bg-[color:#e8e8e8]"></div> */}
         </div>
         <div className="value-list">
           <div className="value-item">

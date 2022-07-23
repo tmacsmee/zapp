@@ -7,6 +7,10 @@
   overflow: hidden;
 }
 
+.mascot {
+  max-width: 400px;
+}
+
 .text-content {
   text-align: left;
   height: 50%;
@@ -17,15 +21,22 @@
   justify-content: space-evenly;
 }
 
-.tag-line {
-  width: 70%;
-}
-
 .tag-line h3 {
   font-size: 3.5rem;
   font-weight: 500;
   font-family: "Playfair Display", serif;
   /* font-family: 'Josefin Sans', sans-serif; */
+}
+
+.tag-line::after {
+  content: '';
+  display: inline-block;
+  height: 1.5rem;
+  width: 500px;
+  width: 70%;
+  background-color: #e8e8e8;
+  margin-top: -80px;
+  margin-left: 1rem;
 }
 
 .value-list {
@@ -47,7 +58,7 @@
 }
 
 .cta-btn {
-  width: 35%;
+  /* width: 35%; */
   display: inline-block;
   border: 1.5px solid black;
   padding: 0.5rem 2rem;
