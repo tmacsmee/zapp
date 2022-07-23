@@ -9,6 +9,7 @@ var moduleType = (<div>null</div>)
 
 function QuestionModule( props ) {
     if (props.type === "0") {
+
         moduleType = DialGame(props);
     } else if (props.type === "1") {
         moduleType = PadlockGame(props);

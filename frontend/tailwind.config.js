@@ -20,6 +20,11 @@ module.exports = {
         "90v": "90vh",
         "100v": "100vh",
       },
+     rotate: {
+        '270': '270deg',
+        '360': '360deg',
+      }
+
     },
   },
   plugins: [],
