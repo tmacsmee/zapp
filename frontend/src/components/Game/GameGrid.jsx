@@ -7,7 +7,8 @@ const styles = {
 function GameGrid() {
     return (
         <div className="grid grid-cols-3 gap-4 h-full max-w-6xl mx-auto justify-items-center mt-10">
-            <QuestionModule type="4" />
+            <div className={styles.gridBox}><QuestionModule type="0" /></div>
+            
             <div className={styles.gridBox}>2</div>
             <div className={styles.gridBox}>3</div>
             <div className={styles.gridBox}>4</div>
