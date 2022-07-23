@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import smileyMascot from "../../assets/cloudy-smiley.png";
 import "../../App.css";
 import "./Hero.css";
@@ -9,19 +10,22 @@ const Hero = () => {
       <div className="mascot">
         <img src={smileyMascot} alt="happy cloudy" />
       </div>
-      <div className="text-content">
+      <div className="text-content break-normal">
         <div className="tag-line">
-          <h3>seamlessly mix learning and fun</h3>
+          <h3>seamlessly mix learning and fun&nbsp;&nbsp;</h3>
+          <div className="-mt-7 p-3 bg-[color:#e8e8e8]"></div>
         </div>
         <div className="value-list">
           <div className="value-item">
-            ■  facilitate active listening and recall
+            ■ facilitate active listening and recall
           </div>
-          <div className="value-item">■  combat cognitive fatigue</div>
-          <div className="value-item">■  boost class participation</div>
+          <div className="value-item">■ combat cognitive fatigue</div>
+          <div className="value-item">■ boost class participation</div>
         </div>
         <div className="cta">
-          <div className="cta-btn">get started</div>
+          <Link to="/main" className="cta-btn">
+            get started
+          </Link>
         </div>
       </div>
     </div>
