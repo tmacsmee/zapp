@@ -8,9 +8,11 @@ function GameGrid() {
     return (
         <div className="grid grid-cols-3 gap-4 h-full max-w-6xl mx-auto justify-items-center mt-10">
             <div className={styles.gridBox}>
-                <QuestionModule type="3" />
+                <QuestionModule type="3" answer1="option1" answer2="option2" answer3="option3" answer4="option4" />
             </div>
-            <div className={styles.gridBox}>2</div>
+            <div className={styles.gridBox}>
+                <QuestionModule type="4" />
+            </div>
             <div className={styles.gridBox}>3</div>
             <div className={styles.gridBox}>4</div>
             <div className={styles.gridBox}>Timer</div>
