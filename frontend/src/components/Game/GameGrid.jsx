@@ -29,7 +29,9 @@ function GameGrid() {
             </div>
             
             <div className={styles.gridBox}>Timer</div>
-            <div className={styles.gridBox}>6</div>
+            <div className={styles.gridBox}>
+            <QuestionModule type="2" />
+            </div>
             <div className={styles.gridBox}>7</div>
             <div className={styles.gridBox}>8</div>
             <div className={styles.gridBox}>9</div>
