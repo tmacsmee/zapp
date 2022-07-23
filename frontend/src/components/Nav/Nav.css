@@ -1,0 +1,36 @@
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 0 1rem;
+}
+
+.logo h2 {
+    font-weight: 500;
+    font-size: 3rem;
+    padding-left: 1rem;
+    font-family: 'Playfair Display', serif;
+}
+
+.nav-items {
+    display: flex;
+    padding: 1rem;
+    font-weight: 500;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.nav-item {
+    font-size: 1.2rem;
+    padding: 2px 15px;
+    margin: 0 1rem;
+    cursor: pointer;
+}
+
+.primary-btn {
+    border: 1.5px solid black;
+    border-radius: 99px;
+}
+
+.primary-btn:hover {
+    background-color: #E8E8E8;
+}
