@@ -1,0 +1,67 @@
+.hero-container {
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.mascot {
+    max-width: 400px;
+    margin-left: 3rem;
+}
+
+.text-content {
+    text-align: left;
+    width: 50%;
+    height: 50%;
+    padding: 0 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.tag-line h3{
+    font-size: 2.5rem;
+    font-weight: 500;
+    font-family: 'Playfair Display', serif;
+    /* font-family: 'Josefin Sans', sans-serif; */
+}
+
+.value-list {
+    display: inline-block;
+    font-family: 'Playfair Display', serif;
+    text-align: left;
+}
+
+.value-item {
+    margin-top: 5px;
+    font-size: 1.2rem;
+    margin-left: 1.5rem;
+}
+
+.cta {
+    margin-top: 3rem;
+}
+
+.cta-btn {
+    display: inline-block;
+    border: 1.5px solid black;
+    padding: 0.5rem 2rem;
+    box-shadow: 3px 4px 0px #655F5F;
+    border-radius: 40px;
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: 500;
+    background-color: #E8E8E8;
+    margin-left: 1.5rem;
+}
+
+.cta-btn:hover{
+    box-shadow: 3px 4px 0px #000;
+}
+
+
