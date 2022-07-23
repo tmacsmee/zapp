@@ -61,9 +61,6 @@ export class DBManager {
       console.log("Failed to find student or course");
       return false;
     } else {
-      console.log(
-        student.courses.filter((entry) => entry.course !== course._id)
-      );
       student.courses = student.courses.filter(
         (entry) => entry.course.toString() !== course._id.toString()
       );
@@ -110,5 +107,11 @@ export class DBManager {
     );
 
     return student;
+  }
+
+  static async getCourse(courseCode) {
+    const course = await Course.findOne({ code: courseCode });
+
+    return course;
   }
 }

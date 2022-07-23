@@ -4,6 +4,7 @@ export class Game {
     this.options = options;
     this.answers = answers;
     this.duration = duration;
+    this.timer = null;
   }
 
   getDuration() {
@@ -11,10 +12,17 @@ export class Game {
   }
 
   checkAnswer(index, response) {
-    if (response in this.answers[index - 1]) {
+    if (this.answers[index - 1].includes(response)) {
       return true;
     } else {
       return false;
+    }
+  }
+
+  toDto() {
+    return {
+      questions: this.questions,
+      options: this.options,
     }
   }
 }

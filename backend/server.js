@@ -2,7 +2,17 @@ import express from "express";
 import path from "path";
 import { createServer } from "http";
 import { initSocketServer, getSocketIO } from "./socket/index.js";
-import { CreateRoomOn } from "./socket/on.js";
+import {
+  CreateCourseOn,
+  CreateStudentOn,
+  JoinCourseOn,
+  LeaveCourseOn,
+  CreateGameOn,
+  StartGameOn,
+  JoinGameOn,
+  SubmitResponseOn,
+  LogInOn
+} from "./socket/on.js";
 import mongoose from "mongoose";
 
 const ROOMS = new Map();
@@ -30,7 +40,15 @@ initSocketServer(httpServer);
 const io = getSocketIO();
 
 io.on("connection", (socket) => {
-  CreateRoomOn(socket);
+  CreateCourseOn(socket);
+  CreateStudentOn(socket);
+  LogInOn(socket);
+  JoinCourseOn(socket);
+  LeaveCourseOn(socket);
+  CreateGameOn(socket);
+  StartGameOn(socket);
+  JoinGameOn(socket);
+  SubmitResponseOn(socket);
 });
 
 // Make the "public" folder available statically
