@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import logo from "../../assets/logo.gif";
 import "../../App.css";
 import "./Nav.css";
 
@@ -7,6 +8,7 @@ const Nav = () => {
   return (
     <div className="nav-container">
       <Link to="/" className="logo">
+        <img src={logo} alt="logo"></img>
         <h2>zapp</h2>
       </Link>
       <div className="nav-items">

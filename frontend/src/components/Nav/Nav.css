@@ -7,10 +7,17 @@
   padding: 0 1rem;
 }
 
+.logo img {
+  display: inline-block;
+  width: 26%;
+}
+
 .logo h2 {
+  vertical-align: middle;
+  display: inline-block;
   font-weight: 700;
   font-size: 5rem;
-  padding-left: 1rem;
+  padding-left: 0.3rem;
   font-family: "Playfair Display", serif;
 }
 
