@@ -16,24 +16,24 @@ export default function SwitchGame(props){
     return(
         <div>
             <div>
-                <h2>Question</h2>
+                <h2>What is the answers:</h2>
             </div>
             <div className="grid grid-cols-4 w-full h-32">
                 <div className= {"group relative w-20 h-full p-2" + (switchPos[0] ? " bg-yellow-300":" bg-gray-200")} onClick={()=>handleSwitch(0)}>
-                    <p className='absolute invisible left-[-100%] top-[30%] group-hover:visible bg-white p-2 rounded-md'>Option 1</p>
+                    <p className='min-w-full absolute invisible bottom-[-70%] translate-y-[-100%] left-[50%] translate-x-[-50%] group-hover:visible bg-white p-2 rounded-md z-10 whitespace-nowrap	'>Option 1: the answer</p>
                     <div className={"w-full bg-white h-1/2 duration-100 " + (switchPos[0] ? "translate-y-[100%]":"")}></div>
                 </div>
 
                 <div className= {"group relative w-20 h-full p-2" + (switchPos[1] ? " bg-yellow-300":" bg-gray-200")} onClick={()=>handleSwitch(1)}>
-                    <p className='absolute invisible left-[-100%] top-[30%] group-hover:visible bg-white p-2 rounded-md'>Option 2</p>
+                <p className='min-w-full absolute invisible bottom-[-70%] translate-y-[-100%] left-[50%] translate-x-[-50%] group-hover:visible bg-white p-2 rounded-md z-10 whitespace-nowrap'>not the answers</p>
                     <div className={"w-full bg-white h-1/2 duration-100 " + (switchPos[1] ? "translate-y-[100%]":"")}></div>
                 </div>
                 <div className= {"group relative w-20 h-full p-2" + (switchPos[2] ? " bg-yellow-300":" bg-gray-200")} onClick={()=>handleSwitch(2)}>
-                    <p className='absolute invisible left-[-100%] top-[30%] group-hover:visible bg-white p-2 rounded-md'>Option 3</p>
+                <p className='min-w-full absolute invisible bottom-[-70%] translate-y-[-100%] left-[50%] translate-x-[-50%] group-hover:visible bg-white p-2 rounded-md z-10 whitespace-nowrap'>not the answer</p>
                     <div className={"w-full bg-white h-1/2 duration-100 " + (switchPos[2] ? "translate-y-[100%]":"")}></div>
                 </div>
                 <div className= {"group relative w-20 h-full p-2" + (switchPos[3] ? " bg-yellow-300":" bg-gray-200")} onClick={()=>handleSwitch(3)}>
-                    <p className='absolute invisible left-[-100%] top-[30%] group-hover:visible bg-white p-2 rounded-md'>Option 4</p>
+                <p className='min-w-full absolute invisible bottom-[-70%] translate-y-[-100%] left-[50%] translate-x-[-50%] group-hover:visible bg-white p-2 rounded-md z-10 whitespace-nowrap  '>maybe the answer</p>
                     <div className={"w-full bg-white h-1/2 duration-100 " + (switchPos[3] ? "translate-y-[100%]":"")}></div>
                 </div>
             </div>
