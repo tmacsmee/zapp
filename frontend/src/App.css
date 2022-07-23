@@ -16,3 +16,7 @@ h1 {
     /* font-family: 'Josefin Sans', sans-serif; */
   font-family: 'Playfair Display', serif;
 }
+
+html {
+  background-color: #F9F9A5;
+}
