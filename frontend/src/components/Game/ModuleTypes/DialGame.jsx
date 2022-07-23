@@ -18,7 +18,7 @@ export default function WireGame(props){
 
 
     return(
-        <div className="w-full h-full flex p-3">
+        <div className="w-full h-full flex p-3 relative">
             <div>
                 <h2 className="">What is M in MERN</h2>
                 <ol>
@@ -36,7 +36,9 @@ export default function WireGame(props){
                 <h3 className="absolute right-0 top-[50%]">2</h3>
                 <h3 className="absolute bottom-[-5px] left-[50%]">3</h3>
                 <h3 className="absolute left-0 top-[50%]">4</h3>
+                
             </div>
+            <button className="absolute bottom-0 right-0 m-2 p-1 border-2 border-black rounded-md ">Submit</button>   
         
         </div>
     );
