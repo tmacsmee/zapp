@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600&display=swap");
 
 * {
   padding: 0;
@@ -6,17 +6,15 @@
   box-sizing: border-box;
 }
 
-
 html {
-  background-color: #F9F9A5;
-
+  background-color: #f9f9a5;
 }
 
 h1 {
-    /* font-family: 'Josefin Sans', sans-serif; */
-  font-family: 'Playfair Display', serif;
+  /* font-family: 'Josefin Sans', sans-serif; */
+  font-family: "Playfair Display", serif;
 }
 
 html {
-  background-color: #F9F9A5;
+  background-color: #f9f9a5;
 }
