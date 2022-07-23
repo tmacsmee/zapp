@@ -6,10 +6,12 @@ import Teacher from "./pages/Teacher";
 import Main from "./pages/Main";
 import Error from "./pages/Error";
 import About from "./pages/About";
+import Nav from './components/Nav/Nav';
 
 function App() {
   return (
     <div className="App">
+      <Nav />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
