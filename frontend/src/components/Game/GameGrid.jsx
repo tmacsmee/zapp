@@ -1,3 +1,5 @@
+import { useState } from 'react';
+
 import QuestionModule from "./QuestionModule";
 
 const styles = {
@@ -5,13 +7,21 @@ const styles = {
 }
 
 function GameGrid() {
+
+    const [ lives, setLives ] = useState(3)
+
+    function getLives() {
+        setLives(lives - 1)
+    }
+
+
     return (
         <div className="grid grid-cols-3 gap-4 h-full max-w-6xl mx-auto justify-items-center mt-10">
             <div className={styles.gridBox}>
-                <QuestionModule type="3" answer1="option1" answer2="option2" answer3="option3" answer4="option4" />
+                <QuestionModule type="3" correct={false} answer={3} lives={getLives} option1="option1" option2="option2" option3="option3" option4="option4" />
             </div>
             <div className={styles.gridBox}>
-                <QuestionModule type="4" />
+                <QuestionModule type="4" lives={lives} />
             </div>
             <div className={styles.gridBox}>3</div>
             <div className={styles.gridBox}>4</div>
