@@ -7,10 +7,10 @@ import "./Hero.css";
 const Hero = () => {
   return (
     <div className="hero-container">
-      <div className="mascot">
+      <div className="mascot animate__animated animate__bounceInLeft">
         <img src={smileyMascot} alt="happy cloudy" />
       </div>
-      <div className="text-content break-normal">
+      <div className="text-content break-normal animate__animated animate__bounceInRight">
         <div className="tag-line">
           <h3>seamlessly mix learning and fun&nbsp;&nbsp;</h3>
           <div className="-mt-7 p-3 bg-[color:#e8e8e8]"></div>
