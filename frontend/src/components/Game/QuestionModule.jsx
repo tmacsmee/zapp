@@ -18,7 +18,7 @@ function QuestionModule( props ) {
     }
     
     return (
-        <div>
+        <div className='w-full'>
             {moduleType}
         </div>
     );
