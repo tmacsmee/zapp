@@ -26,7 +26,7 @@ export default function SwitchGame(props) {
       <div className="grid grid-cols-4 w-full h-32">
         <div
           className={
-            "group relative w-20 h-full p-2 shadow-inner" +
+            "group relative w-20 h-full p-2 shadow-inner rounded-md" +
             (switchPos[0] ? " bg-yellow-300" : " bg-gray-200")
           }
           onClick={() => handleSwitch(0)}
@@ -36,7 +36,7 @@ export default function SwitchGame(props) {
           </p>
           <div
             className={
-              "w-full bg-white h-1/2 duration-100 shadow-md " +
+              "w-full bg-white h-1/2 duration-100 shadow-md rounded-md " +
               (switchPos[0] ? "translate-y-[100%]" : "")
             }
           ></div>
@@ -44,7 +44,7 @@ export default function SwitchGame(props) {
 
         <div
           className={
-            "group relative w-20 h-full p-2 shadow-inner" +
+            "group relative w-20 h-full p-2 shadow-inner rounded-md" +
             (switchPos[1] ? " bg-yellow-300" : " bg-gray-200")
           }
           onClick={() => handleSwitch(1)}
@@ -54,14 +54,14 @@ export default function SwitchGame(props) {
           </p>
           <div
             className={
-              "w-full bg-white h-1/2 duration-100 shadow-md " +
+              "w-full bg-white h-1/2 duration-100 shadow-md rounded-md " +
               (switchPos[1] ? "translate-y-[100%]" : "")
             }
           ></div>
         </div>
         <div
           className={
-            "group relative w-20 h-full p-2 shadow-inner" +
+            "group relative w-20 h-full p-2 shadow-inner rounded-md " +
             (switchPos[2] ? " bg-yellow-300" : " bg-gray-200")
           }
           onClick={() => handleSwitch(2)}
@@ -71,14 +71,14 @@ export default function SwitchGame(props) {
           </p>
           <div
             className={
-              "w-full bg-white h-1/2 duration-100 shadow-md " +
+              "w-full bg-white h-1/2 duration-100 shadow-md rounded-md" +
               (switchPos[2] ? "translate-y-[100%]" : "")
             }
           ></div>
         </div>
         <div
           className={
-            "group relative w-20 h-full p-2 shadow-inner" +
+            "group relative w-20 h-full p-2 shadow-inner rounded-md" +
             (switchPos[3] ? " bg-yellow-300" : " bg-gray-200")
           }
           onClick={() => handleSwitch(3)}
@@ -88,7 +88,7 @@ export default function SwitchGame(props) {
           </p>
           <div
             className={
-              "w-full bg-white h-1/2 duration-100 shadow-md " +
+              "w-full bg-white h-1/2 duration-100 shadow-md rounded-md " +
               (switchPos[3] ? "translate-y-[100%]" : "")
             }
           ></div>

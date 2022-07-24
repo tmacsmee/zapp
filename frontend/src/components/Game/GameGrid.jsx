@@ -19,7 +19,7 @@ function GameGrid() {
   return (
     <div className="grid grid-cols-3 gap-4 h-full max-w-6xl mx-auto justify-items-center mt-10">
       <div className={styles.gridBox}>
-        <QuestionModule question={questions[0]} options={options[0]} type="0" />
+        <QuestionModule type="0" question={questions[0]} options={options[0]} />
       </div>
 
       <div className={styles.gridBox}>
@@ -27,23 +27,23 @@ function GameGrid() {
       </div>
 
       <div className={styles.gridBox}>
-        <QuestionModule type="3" question={questions[2]} options={options[2]} />
+        <QuestionModule type="2" question={questions[2]} options={options[2]} />
       </div>
 
       <div className={styles.gridBox}>
-        <QuestionModule type="3" question={questions[1]} options={options[1]} />
+        <QuestionModule type="1" question={questions[1]} options={options[1]} />
       </div>
 
       <div className={styles.gridBox}>
-        <QuestionModule type="4" lives={lives} />
+        <QuestionModule type="3" lives={lives} />
       </div>
 
       <div className={styles.gridBox}>
-        <QuestionModule type="3" question={questions[3]} options={options[3]} />
+        <QuestionModule type="0" question={questions[3]} options={options[3]} />
       </div>
 
       <div className={styles.gridBox}>
-        <QuestionModule type="1" question={questions[5]} options={options[5]} />
+        <QuestionModule type="2" question={questions[5]} options={options[5]} />
       </div>
 
       <div className={styles.gridBox}>
@@ -51,7 +51,7 @@ function GameGrid() {
       </div>
 
       <div className={styles.gridBox}>
-        <QuestionModule type="0" question={questions[7]} options={options[7]} />
+        <QuestionModule type="2" question={questions[7]} options={options[7]} />
       </div>
     </div>
   );
