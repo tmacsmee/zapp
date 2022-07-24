@@ -20,19 +20,19 @@ export default function WireGame(props) {
 
     return (
         <div className="w-full h-full flex relative">
-            <div className="">
-                <h2 className="">Which of these animals is not an apex predator?</h2>
+            <div className="relative p-0">
+                <h2 className="">Which is not an apex predator?</h2>
                 <ol>
                     <li>1. Lion</li>
                     <li>2. Shark</li>
                     <li>3. Llama</li>
                     <li>4. Eagle</li>
                 </ol>
-                <button className="m-2 px-3 border-2 border-black rounded-md ">Submit</button>
+                <button className="m-2 px-3 border-2 border-black rounded-md absolute right-1 bottom-0">Submit</button>
 
             </div>
 
-            <div className="relative ml-5 px-4">
+            <div className="relative  px-4">
                 <p className="rotate-90"></p><p className="rotate-180"></p> <p className="rotate-270"></p><p className="rotate-360"></p>
 
                 <div className="w-36 h-36 mt-3 bg-gray-300 border-transparent rounded-full relative shadow-[inset_0_0_0_20px_#777] text-white cursor-pointer " onClick={handleDial}>
