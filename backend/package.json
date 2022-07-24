@@ -3,14 +3,15 @@
   "version": "0.1.0",
   "license": "MIT",
   "dependencies": {
-    "express": "^4.17.3",
-    "socket.io": "^4.4.1",
-    "esm": "^3.2.25",
     "cross-env": "7.0.3",
+    "esm": "^3.2.25",
+    "express": "^4.17.3",
+    "mongoose": "^6.4.6",
+    "socket.io": "^4.4.1",
     "socket.io-client": "^4.4.1"
   },
   "scripts": {
-    "test": "jest",
+    "test": "",
     "start": "cross-env NODE_ENV=production node -r esm server.js",
     "start:dev": "nodemon -r esm  server.js"
   },
