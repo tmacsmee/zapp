@@ -1,4 +1,3 @@
-
 import { Button } from "@mantine/core";
 import "./App.css";
 import io from "socket.io-client";
@@ -15,7 +14,7 @@ import TermsAndConditions from "./pages/TermsAndConditions.jsx";
 import Nav from "./components/Nav/Nav";
 import { UserProvider } from "./contexts/UserContext";
 
-const socket = io();
+export const socket = io();
 
 function App() {
   useEffect(() => {
