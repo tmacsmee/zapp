@@ -21,12 +21,12 @@ export default function WireGame(props) {
     return (
         <div className="w-full h-full flex relative">
             <div className="">
-                <h2 className="">What is M in MERN</h2>
+                <h2 className="">Which of these animals is not an apex predator?</h2>
                 <ol>
-                    <li>1. moneky</li>
-                    <li>2. mongolia</li>
-                    <li>3. money</li>
-                    <li>4. Mongo</li>
+                    <li>1. Lion</li>
+                    <li>2. Shark</li>
+                    <li>3. Llama</li>
+                    <li>4. Eagle</li>
                 </ol>
                 <button className="m-2 px-3 border-2 border-black rounded-md ">Submit</button>
 
