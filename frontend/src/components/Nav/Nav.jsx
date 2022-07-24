@@ -16,12 +16,15 @@ const Nav = () => {
         <Link to="/teacher" className="nav-item">
           teacher portal
         </Link>
+        
         <Link to="/leaderboard" className="nav-item">
           leaderboard
         </Link>
-        <Link to="/main" className="nav-item">
+        
+        <Link to="/selectclass" className="nav-item">
           classes
         </Link>
+        
         <div className="button-container">
           <Link to="/login" className="primary-btn">
             log in

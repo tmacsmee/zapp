@@ -11,6 +11,7 @@ import Main from "./pages/Main";
 import Error from "./pages/Error";
 import About from "./pages/About";
 import TermsAndConditions from "./pages/TermsAndConditions.jsx";
+import SelectClass from "./pages/SelectClass.jsx";
 import Nav from "./components/Nav/Nav";
 import Leaderboard from "./pages/Leaderboard";
 import { UserProvider } from "./contexts/UserContext";
@@ -178,7 +179,9 @@ function App() {
           <Route path="leaderboard" element={<Leaderboard />} />
           <Route path="main" element={<Main />} />
           <Route path="terms" element={<TermsAndConditions />} />
+          <Route path="selectclass" element={<SelectClass />} />
           <Route path="*" element={<Error />} />
+          
         </Routes>
       </UserProvider>
     </div>
