@@ -16,6 +16,9 @@ const Nav = () => {
         <Link to="/teacher" className="nav-item">
           teacher portal
         </Link>
+        <Link to="/leaderboard" className="nav-item">
+          leaderboard
+        </Link>
         <Link to="/main" className="nav-item">
           classes
         </Link>

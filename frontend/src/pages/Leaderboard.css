@@ -1,0 +1,132 @@
+.container {
+    width: 80%;
+    margin: 2rem auto;
+    font-family: 'Josefin Sans', sans-serif;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+.current-class {
+    border: 1.5px solid black;
+    font-size: 1.3rem;
+    padding: 2px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 2px solid #000000;
+    box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.current-class:hover {
+    box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.85);
+    transition: 0.3s ease;
+}
+
+.class-stats {
+    color: rgb(55, 53, 53);
+}
+.podium {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.podium-winner {
+    display: inline-block;
+    text-align: center;
+    margin: 4.5rem 0.5rem;
+}
+
+.first-winner {
+    margin-top: -1rem;
+}
+
+.place {
+    font-weight: 600;
+    font-size: 1.3rem;
+}
+.profile-icon {
+    max-width: 300px;
+    margin-bottom: -10px;
+}
+.podium-name {
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+.podium-pts {
+    font-size: 1.1rem;
+    margin-top: -5px;
+}
+.leaderboard-section {
+    outline: 1px solid transparent;
+}
+.leaderboard-section h2 {
+    outline: 1px solid transparent;
+    text-transform: capitalize;
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+.period-section {
+    outline: 1px solid transparent;
+    display: flex;
+}
+.period {
+    margin: 0 1rem;
+    padding: 1px 8px;
+    border-radius: 99px;
+    cursor: pointer;
+    margin-left: 0;
+    margin-right: 1rem;
+    border: 1px solid transparent;
+}
+.active {
+    border: 1px solid black;
+    color: white;
+    background-color: black;
+}
+
+.period:hover{
+    border: 1px solid black;
+    transition: 0.3s ease;
+}
+
+.leaderboard {
+    outline: 1px solid transparent;
+}
+.leaderboard-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.75rem;
+    margin: 10px 0;
+    border: 2px solid #000000;
+    box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+}
+
+.leaderboard-item:hover {
+    box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.85);
+    transition: 0.3s ease;
+}
+
+.self {
+    background-color: #E8E8E8;
+}
+
+.item-left {
+    display: flex;
+    margin-left: 1rem;
+}
+.rank {
+    margin-right: 1rem;
+}
+.name {
+    outline: 1px solid transparent;
+    font-weight: 700;
+}
+.pts {
+    outline: 1px solid transparent;
+    margin-right: 1rem;
+    font-weight: 700;
+}
