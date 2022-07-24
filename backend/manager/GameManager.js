@@ -6,8 +6,13 @@ let games = new Map();
 export class GameManager {
   static createGame(courseCode, gameInfo) {
     const newGame = new Game(gameInfo.questions, gameInfo.options, gameInfo.answers, gameInfo.duration);
-    games.set(courseCode, newGame);
-    return true;
+    if (games.get(courseCode)) {
+      return false;
+    }else{
+      games.set(courseCode, newGame);
+      return true;
+    }
+
   }
 
   static getGame(courseCode) {

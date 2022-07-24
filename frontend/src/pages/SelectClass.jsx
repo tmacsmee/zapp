@@ -42,7 +42,7 @@ export default function SelectClass() {
                     ["4", "12", "10", "5"],
                   ],
                   answers: [[2], [4], [2], [4], [1, 2, 3], [1], [2], [4]],
-                  duration: 60,
+                  duration: 3599,
                 },
               },
               (result) => {

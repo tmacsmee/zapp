@@ -31,7 +31,7 @@ function App() {
     return () => {
       socket.off("timer-update");
     };
-  });
+  },[]);
 
   return (
     <div className="App">
