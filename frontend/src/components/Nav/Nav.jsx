@@ -21,9 +21,6 @@ const Nav = () => {
           leaderboard
         </Link>
         
-        <Link to="/selectclass" className="nav-item">
-          classes
-        </Link>
         
         <div className="button-container">
           <Link to="/login" className="primary-btn">

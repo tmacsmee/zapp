@@ -71,7 +71,7 @@ export default function SwitchGame(props) {
           </p>
           <div
             className={
-              "w-full bg-white h-1/2 duration-100 shadow-md rounded-md" +
+              "w-full bg-white h-1/2 duration-100 shadow-md rounded-md " +
               (switchPos[2] ? "translate-y-[100%]" : "")
             }
           ></div>
