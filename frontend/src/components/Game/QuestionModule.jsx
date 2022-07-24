@@ -8,15 +8,13 @@ import Timer from './ModuleTypes/Timer'
 var moduleType = (<div>null</div>)
 
 function QuestionModule( props ) {
-    if (props.type === "0") {
+    if (props.type === 0) {
         moduleType = DialGame(props);
-    } else if (props.type === "1") {
+    } else if (props.type === 1) {
         moduleType = SwitchGame(props);
-    } else if (props.type === "2") {
-        moduleType = PadlockGame(props);
-    } else if (props.type === "3"){
+    } else if (props.type === 2){
         moduleType = WireGame(props);
-    } else if (props.type === "4") {
+    } else if (props.type === 3) {
         moduleType = Timer(props);
     }
     
