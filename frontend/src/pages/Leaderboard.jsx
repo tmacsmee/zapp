@@ -15,7 +15,7 @@ const Leaderboard = () => {
         </div>
         <div className="class-stats">87 rounds | 493 zaps</div>
       </div>
-      <div className="podium">
+      <div className="podium animate__animated animate__bounceInUp">
         <div className="podium-winner">
           <div className="place">3rd</div>
           <div className="profile-icon">
