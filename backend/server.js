@@ -1,8 +1,19 @@
 import express from "express";
 import path from "path";
 import { createServer } from "http";
-import { Server } from "socket.io";
 import { initSocketServer, getSocketIO } from "./socket/index.js";
+import {
+  CreateCourseOn,
+  CreateStudentOn,
+  JoinCourseOn,
+  LeaveCourseOn,
+  CreateGameOn,
+  StartGameOn,
+  JoinGameOn,
+  SubmitResponseOn,
+  LogInOn
+} from "./socket/on.js";
+import mongoose from "mongoose";
 
 const ROOMS = new Map();
 
@@ -14,24 +25,31 @@ const PORT = process.env.PORT || 8080;
 // Setup JSON parsing for the request body
 app.use(express.json());
 
+mongoose
+  .connect(
+    "mongodb+srv://zapp:lubricatedducks@cluster0.mk2ihx1.mongodb.net/Zapp",
+    { useNewUrlParser: true }
+  )
+  .then(() => {
+    console.log("Connected to MongoDB");
+  });
+
 // Setup our routes.
 initSocketServer(httpServer);
 
 const io = getSocketIO();
 
-// io.on("connection", (socket) => {
-//   CreateRoomOn(socket);
-//   JoinRoomOn(socket);
-//   StartGameOn(socket);
-//   MessageOn(socket);
-//   BoardMovementOn(socket);
-//   BoardBreakOn(socket);
-//   UserDisconnectOn(socket);
-//   UpdateConfigOn(socket);
-//   PlayerReadyOn(socket);
-//   PlayerUnReadyOn(socket);
-//   OnRoomInformationRequest(socket);
-// });
+io.on("connection", (socket) => {
+  CreateCourseOn(socket);
+  CreateStudentOn(socket);
+  LogInOn(socket);
+  JoinCourseOn(socket);
+  LeaveCourseOn(socket);
+  CreateGameOn(socket);
+  StartGameOn(socket);
+  JoinGameOn(socket);
+  SubmitResponseOn(socket);
+});
 
 // Make the "public" folder available statically
 app.use(express.static(path.join(__dirname, "public")));
