@@ -24,6 +24,25 @@
     transition: 0.3s ease;
 }
 
+.class-list{
+    position: absolute;
+    width: 162.73px;
+    background-color: #e8e8e8;
+    margin-top: -25px;
+    display: none;
+    text-align: center;
+}
+
+.class-list li{
+    padding: 12px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.show{
+    display: block;
+}
+
 .class-stats {
     color: rgb(55, 53, 53);
 }

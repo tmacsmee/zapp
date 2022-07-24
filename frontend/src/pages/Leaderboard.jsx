@@ -5,15 +5,39 @@ import avatar1 from "../assets/avatar1.png";
 import avatar2 from "../assets/avatar2.png";
 import avatar3 from "../assets/avatar3.png";
 
+
 const Leaderboard = () => {
+  const [isHide, setIsHide] = React.useState(true);
+  function handleShowClassList(){
+    setIsHide(false);
+  }
+  function handleHideClassList(){
+    setIsHide(true);
+  }
   return (
     <div className="container">
       <div className="header">
-        <div className="current-class">
+        <div className="current-class" onMouseEnter={handleShowClassList} onMouseLeave={handleHideClassList}>
           <span>▼ </span>
           Y4 Science
         </div>
         <div className="class-stats">87 rounds | 493 zaps</div>
+      </div>
+      <div className={isHide? "class-list":"class-list show"}>
+        <ul>
+          <li>
+            Y4 Reading
+          </li>
+          <li>
+            Y4 Maths
+          </li>
+          <li>
+            Y4 Writing
+          </li>
+          <li>
+            Y4 PE/Health
+          </li>
+        </ul>
       </div>
       <div className="podium animate__animated animate__bounceInUp">
         <div className="podium-winner">
