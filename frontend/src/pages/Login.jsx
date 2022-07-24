@@ -1,5 +1,5 @@
 import React from "react";
-import { Navigate } from "react-router-dom";
+import { Navigate, useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { UserContext } from "../contexts/UserContext";
 import { AppContext } from "../AppContextProvider";
@@ -8,7 +8,8 @@ import { useContext } from "react";
 
 export default function Login() {
   const [state, dispatch] = React.useContext(UserContext);
-  const { setUsername } = useContext(AppContext);
+  const { setUsername, setStudent } = useContext(AppContext);
+  const navigate = useNavigate();
 
   function handleSubmit(event) {
     event.preventDefault();
@@ -25,6 +26,8 @@ export default function Login() {
       (result) => {
         if (result) {
           setUsername(username);
+          setStudent(result);
+          navigate("/selectclass");
         }
       }
     );

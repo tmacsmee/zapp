@@ -29,7 +29,7 @@ export function LogInOn(socket) {
         callback(null);
       }
     }
-  })
+  });
 }
 
 export function JoinCourseOn(socket) {
@@ -66,13 +66,13 @@ export function CreateGameOn(socket) {
     if (callback) {
       callback(result);
     }
-  })
+  });
 }
 
 export function StartGameOn(socket) {
   socket.on("start-game", (courseCode) => {
     GameManager.startGame(courseCode);
-  })
+  });
 }
 
 export function JoinGameOn(socket) {
@@ -87,16 +87,15 @@ export function JoinGameOn(socket) {
         callback(null);
       }
     }
-  }
-  )
+  });
 }
 
 export function SubmitResponseOn(socket) {
   socket.on("submit-response", ({ courseCode, index, response }, callback) => {
-    const game = GameManager.getGame(courseCode)
+    const game = GameManager.getGame(courseCode);
     if (game && callback) {
       const result = game.checkAnswer(index, response);
       callback(result);
     }
-  })
+  });
 }

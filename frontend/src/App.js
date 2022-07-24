@@ -1,7 +1,7 @@
 import { Button } from "@mantine/core";
 import "./App.css";
 import io from "socket.io-client";
-import { useEffect } from "react";
+import { useContext, useEffect } from "react";
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
@@ -15,14 +15,18 @@ import SelectClass from "./pages/SelectClass.jsx";
 import Nav from "./components/Nav/Nav";
 import Leaderboard from "./pages/Leaderboard";
 import { UserProvider } from "./contexts/UserContext";
+import { AppContext } from "./AppContextProvider";
 
 export const socket = io();
 
 function App() {
+  const { setMinutes, setSeconds } = useContext(AppContext);
+
   useEffect(() => {
     socket.emit("connection");
     socket.on("timer-update", (time) => {
-      console.log(time.min + ":" + time.sec);
+      setMinutes(time.min);
+      setSeconds(time.sec);
     });
     return () => {
       socket.off("timer-update");
@@ -181,7 +185,6 @@ function App() {
           <Route path="terms" element={<TermsAndConditions />} />
           <Route path="selectclass" element={<SelectClass />} />
           <Route path="*" element={<Error />} />
-          
         </Routes>
       </UserProvider>
     </div>

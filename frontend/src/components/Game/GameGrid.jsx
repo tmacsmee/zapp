@@ -1,59 +1,60 @@
-import { useState } from 'react';
+import { useContext } from "react";
+import { useState } from "react";
+import { AppContext } from "../../AppContextProvider";
 
 import QuestionModule from "./QuestionModule";
 
 const styles = {
-    gridBox: `flex justify-center items-center h-44 w-full bg-secondary rounded-md shadow-md p-4`,
-}
+  gridBox: `flex justify-center items-center h-44 w-full bg-secondary rounded-md shadow-md p-4`,
+};
 
 function GameGrid() {
+  const { questions, options } = useContext(AppContext);
+  const [lives, setLives] = useState(3);
 
-    const [ lives, setLives ] = useState(3)
+  function getLives() {
+    setLives(lives - 1);
+  }
 
-    function getLives() {
-        setLives(lives - 1)
-    }
+  return (
+    <div className="grid grid-cols-3 gap-4 h-full max-w-6xl mx-auto justify-items-center mt-10">
+      <div className={styles.gridBox}>
+        <QuestionModule question={questions[0]} options={options[0]} type="0" />
+      </div>
 
+      <div className={styles.gridBox}>
+        <QuestionModule type="1" question={questions[4]} options={options[4]} />
+      </div>
 
-    return (
-        <div className="grid grid-cols-3 gap-4 h-full max-w-6xl mx-auto justify-items-center mt-10">
-            <div className={styles.gridBox}>
-                <QuestionModule type="0" />
-            </div>
-            
-            <div className={styles.gridBox}>
-                <QuestionModule type="1" />
-            </div>
-            
-            <div className={styles.gridBox}>
-                <QuestionModule type="3" correct={false} answer={3} lives={getLives} option1="option1" option2="option2" option3="option3" option4="option4" />
-            </div>
+      <div className={styles.gridBox}>
+        <QuestionModule type="3" question={questions[2]} options={options[2]} />
+      </div>
 
-            <div className={styles.gridBox}>
-                <QuestionModule type="3" correct={false} answer={3} lives={getLives} option1="option1" option2="option2" option3="option3" option4="option4" />    
-            </div>
-            
-            <div className={styles.gridBox}>
-                <QuestionModule type="4" lives={lives} />
-            </div>
+      <div className={styles.gridBox}>
+        <QuestionModule type="3" question={questions[1]} options={options[1]} />
+      </div>
 
-            <div className={styles.gridBox}>
-                <QuestionModule type="3" correct={false} answer={3} lives={getLives} option1="option1" option2="option2" option3="option3" option4="option4" />
-            </div>
+      <div className={styles.gridBox}>
+        <QuestionModule type="4" lives={lives} />
+      </div>
 
-            <div className={styles.gridBox}>
-                <QuestionModule type="1" />
-            </div>
+      <div className={styles.gridBox}>
+        <QuestionModule type="3" question={questions[3]} options={options[3]} />
+      </div>
 
-            <div className={styles.gridBox}>
-                <QuestionModule type="0" />
-            </div>
+      <div className={styles.gridBox}>
+        <QuestionModule type="1" question={questions[5]} options={options[5]} />
+      </div>
 
-            <div className={styles.gridBox}>
-                <QuestionModule type="0" />
-            </div>
-        </div>
-    );
+      <div className={styles.gridBox}>
+        <QuestionModule type="0" question={questions[6]} options={options[6]} />
+      </div>
+
+      <div className={styles.gridBox}>
+        <QuestionModule type="0" question={questions[7]} options={options[7]} />
+      </div>
+    </div>
+  );
 }
 
 export default GameGrid;
