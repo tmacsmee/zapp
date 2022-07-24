@@ -5,13 +5,23 @@ import io from "socket.io-client";
 import { Button } from "@mantine/core";
 
 const socket = io();
+import "./App.css";
+import { Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import Login from "./pages/Login";
+import Teacher from "./pages/Teacher";
+import Main from "./pages/Main";
+import Error from "./pages/Error";
+import About from "./pages/About";
+import TermsAndConditions from "./pages/TermsAndConditions.jsx";
+import Nav from "./components/Nav/Nav";
 
 function App() {
   useEffect(() => {
     socket.emit("connection");
     socket.on("timer-update", (time) => {
-      console.log(time.min + ":" + time.sec)
-    })
+      console.log(time.min + ":" + time.sec);
+    });
     return () => {
       socket.off("timer-update");
     };
@@ -19,7 +29,7 @@ function App() {
 
   return (
     <div className="App">
-      <header className="App-header">
+      {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
@@ -156,7 +166,17 @@ function App() {
         >
           Submit Response
         </Button>
-      </header>
+      </header> */}
+      <Nav />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="login" element={<Login />} />
+        <Route path="about" element={<About />} />
+        <Route path="teacher" element={<Teacher />} />
+        <Route path="main" element={<Main />} />
+        <Route path="terms" element={<TermsAndConditions />} />
+        <Route path="*" element={<Error />} />
+      </Routes>
     </div>
   );
 }

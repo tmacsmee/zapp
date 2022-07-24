@@ -1,0 +1,68 @@
+.nav-container {
+  margin-top: 0.4rem;
+  height: 5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+.logo h2 {
+  font-weight: 700;
+  font-size: 5rem;
+  padding-left: 1rem;
+  font-family: "Playfair Display", serif;
+}
+
+.nav-items {
+  /* height: 100%; */
+  /* vertical-align: center; */
+  font-weight: 500;
+  font-family: "Josefin Sans", sans-serif;
+  display: flex;
+}
+
+.nav-item {
+  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* height: 100%; */
+  font-size: 1.6rem;
+  /* padding: 1.4rem 15px; */
+  padding: 0 1rem;
+  margin: 0 1rem;
+  cursor: pointer;
+  font-weight: 700;
+  border-radius: 99px;
+  border: 1px solid transparent;
+}
+
+.nav-item:hover {
+  background-color: #f5f5f5;
+  color: #43655a;
+  border: 1px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.button-container {
+  display: inline-block;
+  /* height: 100%; */
+}
+
+.primary-btn {
+  display: inline-block;
+  border: 1.5px solid black;
+  padding: 0 1rem;
+  border-radius: 99px;
+  font-size: 1.8rem;
+  margin: 0 1rem;
+  box-shadow: 3px 4px 0px #cec3c3;
+}
+
+.primary-btn:hover {
+  background-color: #e8e8e8;
+  box-shadow: 3px 4px 0px #000;
+  color: #43655a;
+  transition: all 0.3s ease;
+}
