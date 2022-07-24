@@ -12,6 +12,7 @@ import Error from "./pages/Error";
 import About from "./pages/About";
 import TermsAndConditions from "./pages/TermsAndConditions.jsx";
 import Nav from "./components/Nav/Nav";
+import Leaderboard from "./pages/Leaderboard";
 import { UserProvider } from "./contexts/UserContext";
 
 export const socket = io();
@@ -174,6 +175,7 @@ function App() {
           <Route path="login" element={<Login />} />
           <Route path="about" element={<About />} />
           <Route path="teacher" element={<Teacher />} />
+          <Route path="leaderboard" element={<Leaderboard />} />
           <Route path="main" element={<Main />} />
           <Route path="terms" element={<TermsAndConditions />} />
           <Route path="*" element={<Error />} />
