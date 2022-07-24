@@ -1,11 +1,8 @@
-import logo from "./logo.svg";
-import "./App.css";
-import { useEffect } from "react";
-import io from "socket.io-client";
-import { Button } from "@mantine/core";
 
-const socket = io();
+import { Button } from "@mantine/core";
 import "./App.css";
+import io from "socket.io-client";
+import { useEffect } from "react";
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
@@ -17,6 +14,8 @@ import About from "./pages/About";
 import TermsAndConditions from "./pages/TermsAndConditions.jsx";
 import Nav from "./components/Nav/Nav";
 import { UserProvider } from "./contexts/UserContext";
+
+const socket = io();
 
 function App() {
   useEffect(() => {
