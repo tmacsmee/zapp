@@ -7,6 +7,7 @@ import Main from "./pages/Main";
 import Error from "./pages/Error";
 import About from "./pages/About";
 import Nav from "./components/Nav/Nav";
+import Leaderboard from "./pages/Leaderboard";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="login" element={<Login />} />
         <Route path="about" element={<About />} />
         <Route path="teacher" element={<Teacher />} />
+        <Route path="leaderboard" element={<Leaderboard />} />
         <Route path="main" element={<Main />} />
         <Route path="*" element={<Error />} />
       </Routes>
