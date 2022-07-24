@@ -52,7 +52,8 @@ function WireGame(props) {
   });
 
   return (
-    <div className="relative flex flex-row w-full h-full space-between justify-center items-center">
+    <div className="group relative flex flex-row w-full h-full space-between justify-center items-center">
+      <div className="min-w-full absolute invisible top-[-10%] translate-y-[-100%] left-[50%] translate-x-[-50%] group-hover:visible bg-white p-2 shadow-md rounded-md z-10 whitespace-nowrap">{props.question}</div>
       <div className="flex flex-col space-y-3 justify-center items-center w-full mr-3 ml-3 z-10">
         <div
           className="flex flex-row w-full space-x-4"
