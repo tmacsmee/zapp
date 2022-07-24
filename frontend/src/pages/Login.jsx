@@ -1,29 +1,19 @@
 import React from "react";
 import { Navigate } from "react-router-dom";
 import { Link } from "react-router-dom";
-
-const login = async (target) => {
-  await Promise.resolve({ username: "test", password: "test" });
-};
+import { UserContext } from "../contexts/UserContext";
 
 export default function Login() {
-  const [user, setUser] = React.useState();
-  const [error, setError] = React.useState();
+  const [state, dispatch] = React.useContext(UserContext);
 
-  async function handleSubmit(event) {
+  function handleSubmit(event) {
     event.preventDefault();
-    try {
-      let user = await login(event.target);
-      setUser({ user });
-    } catch (error) {
-      setError({ error });
-    }
+    dispatch({ type: "login" });
   }
 
   return (
     <div className="animate__animated animate__backInRight animate__faster h-90v flex flex-row justify-center space-x-3">
-      {error && <Navigate to="/error" replace={true} />}
-      {user && <Navigate to="/main" replace={true} />}
+      {state.active && <Navigate to="/main" replace={true} />}
       <form
         className="w-1/4 flex flex-col justify-center"
         onSubmit={(event) => handleSubmit(event)}
