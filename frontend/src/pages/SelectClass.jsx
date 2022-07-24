@@ -11,7 +11,7 @@ export default function SelectClass() {
                 ✕	
                 </button>
             </button>
-            <button className="w-[50%] py-5 mx-auto my-3 text-3xl border-black border-2 rounded-full hover:bg-gray-200 relative group">
+            <button className="mt-6 w-[50%] py-5 mx-auto my-3 text-3xl border-black border-2 rounded-full hover:bg-gray-200 relative group">
                 Maths
                 <button className="absolute right-5 invisible group-hover:visible hover:bg-red-400 rounded-full px-2">
                 ✕	

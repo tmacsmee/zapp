@@ -28,17 +28,6 @@
   /* font-family: 'Josefin Sans', sans-serif; */
 }
 
-.tag-line::after {
-  content: '';
-  display: inline-block;
-  height: 1.5rem;
-  width: 500px;
-  width: 70%;
-  background-color: #e8e8e8;
-  margin-top: -80px;
-  margin-left: 1rem;
-}
-
 .value-list {
   display: inline-block;
   font-family: "Playfair Display", serif;

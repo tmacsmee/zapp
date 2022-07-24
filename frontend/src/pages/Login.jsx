@@ -64,7 +64,7 @@ export default function Login() {
             className="form-checkbox rounded mt-1"
             required
           />
-          <div className="w-full text-base ml-2">
+          <div className="w-full text-sm ml-2">
             I have read and agree with the&nbsp;
             <Link
               to="/terms"
