@@ -16,7 +16,7 @@ const Nav = () => {
         <Link to="/teacher" className="nav-item">
           teacher portal
         </Link>
-        <Link to="/main" className="nav-item">
+        <Link to="/selectclass" className="nav-item">
           classes
         </Link>
         <div className="button-container">
