@@ -23,7 +23,7 @@ const Hero = () => {
           <div className="value-item">■ boost class participation</div>
         </div>
         <div className="cta">
-          <Link to="/main" className="cta-btn">
+          <Link to="/login" className="cta-btn">
             get started
           </Link>
         </div>
