@@ -35,7 +35,7 @@ export default function WireGame(props) {
             <div className="relative ml-5 px-4">
                 <p className="rotate-90"></p><p className="rotate-180"></p> <p className="rotate-270"></p><p className="rotate-360"></p>
 
-                <div className="w-36 h-36 mt-3 bg-gray-300 border-transparent rounded-full relative shadow-[inset_0_0_0_20px_#777] " onClick={handleDial}>
+                <div className="w-36 h-36 mt-3 bg-gray-300 border-transparent rounded-full relative shadow-[inset_0_0_0_20px_#777] text-white " onClick={handleDial}>
                     <div className={"w-1 h-12 rounded-sm bg-red-600 absolute bottom-[50%] left-[50%] translate-x-[-50%] origin-bottom " + "rotate-" + dialPos * 90 + (dialPos === 0 ? "" : " duration-100")}></div>
                     <h3 className="absolute top-[-2px] left-[50%] translate-x-[-50%]">1</h3>
                     <h3 className="absolute right-1 top-[50%] translate-y-[-50%]" >2</h3>

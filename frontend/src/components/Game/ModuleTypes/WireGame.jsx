@@ -23,7 +23,7 @@ function WireGame( props ) {
     const handleGreenClick = () => {
         if (!redIsCut && !greenIsCut && !blueIsCut && !orangeIsCut) {
             setGreenIsCut(true);
-            if (greenIsCut && props.answer !== 2) {
+            if (props.answer !== 2) {
                 props.lives()
             }
         }
@@ -32,7 +32,7 @@ function WireGame( props ) {
     const handleBlueClick = () => {
         if (!redIsCut && !greenIsCut && !blueIsCut && !orangeIsCut) {
             setBlueIsCut(true);
-            if (blueIsCut && props.answer !== 3) {
+            if (props.answer !== 3) {
                 props.lives()
             }
         }
@@ -41,7 +41,7 @@ function WireGame( props ) {
     const handleorangeClick = () => {
         if (!redIsCut && !greenIsCut && !blueIsCut && !orangeIsCut) {
             setorangeIsCut(true);
-            if (orangeIsCut && props.answer !== 4) {
+            if (props.answer !== 4) {
                 props.lives()
             }
         }
