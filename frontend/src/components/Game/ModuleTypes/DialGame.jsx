@@ -28,7 +28,7 @@ export default function WireGame(props) {
                     <li>3. money</li>
                     <li>4. Mongo</li>
                 </ol>
-                <button className="m-2 px-1 border-2 border-black rounded-md ">Submit</button>
+                <button className="m-2 px-3 border-2 border-black rounded-md ">Submit</button>
 
             </div>
 
