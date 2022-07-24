@@ -2,13 +2,32 @@ import React from "react";
 import { Navigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { UserContext } from "../contexts/UserContext";
+import { AppContext } from "../AppContextProvider";
+import { socket } from "../App.js";
+import { useContext } from "react";
 
 export default function Login() {
   const [state, dispatch] = React.useContext(UserContext);
+  const { setUsername } = useContext(AppContext);
 
   function handleSubmit(event) {
     event.preventDefault();
-    dispatch({ type: "login" });
+    const usernameElement = document.getElementById("username");
+    const passwordElement = document.getElementById("password");
+    const username = usernameElement.value;
+    const password = passwordElement.value;
+    socket.emit(
+      "login-student",
+      {
+        username: username,
+        password: password,
+      },
+      (result) => {
+        if (result) {
+          setUsername(username);
+        }
+      }
+    );
   }
 
   return (
@@ -22,12 +41,14 @@ export default function Login() {
         <div className="font-semibold text-2xl mb-2">Username:</div>
         <input
           type="text"
+          id="username"
           className="form-input rounded text-xl font-semibold"
           placeholder="Enter Your Username Here"
         />
         <div className="font-semibold text-2xl mt-10 mb-2">Password:</div>
         <input
           type="password"
+          id="password"
           className="form-input rounded text-xl font-semibold"
           placeholder="Enter Your Password Here"
         />
