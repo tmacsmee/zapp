@@ -3,6 +3,9 @@ const colors = require("tailwindcss/colors");
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
+    fontFamily: {
+      'sans': ['Helvetica', 'Arial', 'sans-serif'],
+    },
     extend: {
       colors: {
         primary: "#f9f9a5",
@@ -20,12 +23,11 @@ module.exports = {
         "90v": "90vh",
         "100v": "100vh",
       },
-     rotate: {
-        '270': '270deg',
-        '360': '360deg',
-      }
-
+      rotate: {
+        270: "270deg",
+        360: "360deg",
+      },
     },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/forms")],
 };

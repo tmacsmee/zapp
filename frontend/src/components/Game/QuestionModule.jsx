@@ -9,16 +9,15 @@ var moduleType = (<div>null</div>)
 
 function QuestionModule( props ) {
     if (props.type === "0") {
-
         moduleType = DialGame(props);
     } else if (props.type === "1") {
-        moduleType = PadlockGame(props);
-    } else if (props.type === "2") {
         moduleType = SwitchGame(props);
+    } else if (props.type === "2") {
+        moduleType = PadlockGame(props);
     } else if (props.type === "3"){
         moduleType = WireGame(props);
     } else if (props.type === "4") {
-        moduleType = Timer();
+        moduleType = Timer(props);
     }
     
     return (<div className="w-full h-full"> { moduleType } </div>);
