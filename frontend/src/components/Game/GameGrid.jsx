@@ -51,7 +51,7 @@ function GameGrid() {
       </div>
 
       <div className={styles.gridBox}>
-        <QuestionModule type="2" question={questions[7]} options={options[7]} answer={5} lives={getLives} />
+        <QuestionModule type="2" question={questions[7]} options={options[7]} answer={4} lives={getLives} />
       </div>
     </div>
   );
