@@ -6,9 +6,9 @@ import error404 from "../assets/error-404.jpg";
 export default function Error() {
   return (
     <div className="w-full h-90v flex flex-col justify-center">
-      <div className="flex flex-row justify-center space-x-20">
+      <div className="flex flex-row justify-center">
         <div>
-          <img src={sadCloud} alt="sad cloud"></img>
+          <img src={sadCloud} className="w-[80%]" alt="sad cloud"></img>
         </div>
         <div className="flex flex-col justify-center space-y-6">
           <img src={error404} alt="error 404"></img>
