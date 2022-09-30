@@ -1,6 +1,6 @@
 # zapp
 
-A 48-hour 2022 WDCC x SESA Hackathon project, at 1st Place.  
+A 48-hour WDCC x SESA Hackathon 2022 project, winning 1st Place.  
 (Team Lubricated Ducks)
 
 ![image](https://user-images.githubusercontent.com/100253339/181872178-8c1a6e51-7e0a-46d4-883c-96711d65b04f.png)
